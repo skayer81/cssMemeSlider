@@ -1,0 +1,33 @@
+.slider-window{
+    width: 500px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+img{
+    width: 500px;
+    height: 200px;
+}
+.slide-container{
+    width: 2000px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    margin-left: 0;
+    transition: 1s;
+}
+#slide1:checked~.slider-window .slide-container{
+    margin-left: 0;
+}
+
+#slide2:checked~.slider-window .slide-container{
+    margin-left: -500px;
+}
+
+#slide3:checked~.slider-window .slide-container{
+    margin-left: -1000px;
+}
+
+#slide4:checked~.slider-window .slide-container{
+    margin-left: -1500px;
+}
