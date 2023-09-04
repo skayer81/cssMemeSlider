@@ -1,16 +1,20 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
 .slider-window{
-    width: 500vw;
-    height: 200px;
+    width: 80%;
+    height: 70%;
     border: 1px solid red;
     margin: 0 auto;
 }
 img{
-    width: 500px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 .slide-container{
-    width: 2000px;
-    height: 200px;
+    width: 400%;
+    height: 100%;
     border: 1px solid black;
     display: flex;
     margin-left: 0;
@@ -21,15 +25,15 @@ img{
 }
 
 #slide2:checked~.slider-window .slide-container{
-    margin-left: -500px;
+    margin-left: -100%;
 }
 
 #slide3:checked~.slider-window .slide-container{
-    margin-left: -1000px;
+    margin-left: -200%;
 }
 
 #slide4:checked~.slider-window .slide-container{
-    margin-left: -1500px;
+    margin-left: -300%;
 }
 
 .label-container{
@@ -40,15 +44,19 @@ img{
 } 
 label{
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
     border: 1px solid blue;
     transition: 0.5s;
     cursor: pointer;
 
 }
+
 label:hover .firstRadius{
     background-color: white;
+}
+label:active .firstRadius{
+    background-color: #999;
 }
 /* label:hover .secondRadius{
     background-color: black;
@@ -59,15 +67,15 @@ label:hover .thirdRadius{
 } */
 
 .firstRadius{
-    height: 80%;
-    width: 80%;
+    height: 70%;
+    width: 70%;
     /* border: 1px solid red; */
     margin: 10%;
     /* padding: 10%; */
     border-radius: 100%;
     background-color: blue;
     transition: 0.5s;
-    border: 1px blue solid
+    border:  transparent solid
 }
 .secondRadius{
     width: 80%;
@@ -89,16 +97,56 @@ label:hover .thirdRadius{
     transition: 0.5s;
 } 
 */
-#slide1:checked~.label-container [for='slide1'] .secondRadius{
+#slide1:checked~.container .label-container [for='slide1'] .secondRadius{
     background-color: black
 }
-#slide2:checked~.label-container [for='slide2'] .secondRadius{
+#slide2:checked~.container .label-container [for='slide2'] .secondRadius{
     background-color: black
 }
-#slide3:checked~.label-container [for='slide3'] .secondRadius{
+#slide3:checked~.container .label-container [for='slide3'] .secondRadius{
     background-color: black
 }
-#slide4:checked~.label-container [for='slide4'] .secondRadius{
+#slide4:checked~.container .label-container [for='slide4'] .secondRadius{
     background-color: black
+}
+
+.container{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 15%;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-slider_window{
+    height: 100%;
+    width: 30%;
+}
+
+.text-slider-container{
+    display: flex;
+    width: 400%;
+    transition: 1s;
+}
+p{
+    width: 100%;
+}
+
+#slide1:checked~.container .text-slider-container{
+    margin-left: 0;
+}
+
+#slide2:checked~.container .text-slider-container{
+    margin-left: -100%;
+}
+
+#slide3:checked~.container .text-slider-container{
+    margin-left: -200%;
+}
+
+#slide4:checked~.container .text-slider-container{
+    margin-left: -300%;
 }
 
