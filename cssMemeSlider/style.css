@@ -1,12 +1,19 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-color: #333;
+}
+input{
+    width: 0;
+    height: 0;
 }
 .slider-window{
     width: 80%;
     height: 70%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto;
+    border-radius: 10%;
+    overflow: hidden;
 }
 img{
     width: 100%;
@@ -15,7 +22,7 @@ img{
 .slide-container{
     width: 400%;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     margin-left: 0;
     transition: 1s;
@@ -39,16 +46,20 @@ img{
 .label-container{
     /* height: 40px;
     width: 40px; */
+    width: 40%;
     display: flex;
-    background-color: black;
+    /* background-color: black; */
+    justify-content: right;
+    align-items: center;
 } 
 label{
     display: block;
-    height: 70px;
-    width: 70px;
-    border: 1px solid blue;
+    height: 10vh;
+    width: 10vh;
+    /* border: 1px solid blue; */
     transition: 0.5s;
     cursor: pointer;
+    margin-right: 2%;
 
 }
 
@@ -67,10 +78,10 @@ label:hover .thirdRadius{
 } */
 
 .firstRadius{
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 60%;
     /* border: 1px solid red; */
-    margin: 10%;
+    margin: 15%;
     /* padding: 10%; */
     border-radius: 100%;
     background-color: blue;
@@ -98,16 +109,17 @@ label:hover .thirdRadius{
 } 
 */
 #slide1:checked~.container .label-container [for='slide1'] .secondRadius{
-    background-color: black
+    background-color: #333
 }
 #slide2:checked~.container .label-container [for='slide2'] .secondRadius{
-    background-color: black
+    background-color: #333
+
 }
 #slide3:checked~.container .label-container [for='slide3'] .secondRadius{
-    background-color: black
+    background-color: #333
 }
 #slide4:checked~.container .label-container [for='slide4'] .secondRadius{
-    background-color: black
+    background-color: #333
 }
 
 .container{
@@ -122,16 +134,28 @@ label:hover .thirdRadius{
 
 .text-slider_window{
     height: 100%;
-    width: 30%;
+    width: 40%;
+    border-radius: 5%;
+    overflow: hidden;
+    border: 0.01% solid transparent;
 }
 
 .text-slider-container{
     display: flex;
     width: 400%;
+    height: 100%;
     transition: 1s;
+    flex-grow: 1;
 }
 p{
+    margin: 0;
     width: 100%;
+    height: 100%;
+    font-size: 4vh;
+    background-color: aliceblue;
+    text-align: center;
+    /* line-height: 320%; */
+    /* padding-top: 10%; */
 }
 
 #slide1:checked~.container .text-slider-container{
@@ -149,4 +173,3 @@ p{
 #slide4:checked~.container .text-slider-container{
     margin-left: -300%;
 }
-
